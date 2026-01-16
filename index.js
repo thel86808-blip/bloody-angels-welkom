@@ -1,3 +1,4 @@
+const http = require('http');
 const {
   Client,
   GatewayIntentBits,
@@ -6,6 +7,9 @@ const {
   ActivityType
 } = require('discord.js');
 
+/* ======================
+   DISCORD CLIENT
+====================== */
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -18,6 +22,9 @@ const client = new Client({
 const TOKEN = process.env.TOKEN;
 const PORT = process.env.PORT || 3000;
 
+/* ======================
+   HTTP SERVER (RENDER)
+====================== */
 http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
   res.end('Bot is online 🚀');
@@ -25,14 +32,20 @@ http.createServer((req, res) => {
   console.log(`🌐 HTTP server draait op poort ${PORT}`);
 });
 
+/* ======================
+   READY EVENT
+====================== */
 client.once(Events.ClientReady, (client) => {
   console.log(`✅ Bot is online als ${client.user.tag}`);
 
-  client.user.setActivity("Murat's Shop", {
+  client.user.setActivity("Kijt naar Murat's Shop", {
     type: ActivityType.Watching,
   });
 });
 
+/* ======================
+   WELCOME EVENT
+====================== */
 client.on(Events.GuildMemberAdd, async (member) => {
   const channelId = '1434578266672468124';
 
@@ -70,7 +83,7 @@ We zijn blij dat je er bent!
   }
 });
 
-
+/* ======================
+   LOGIN
+====================== */
 client.login(TOKEN);
-
-
