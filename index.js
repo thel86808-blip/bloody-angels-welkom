@@ -20,7 +20,7 @@ const TOKEN = process.env.TOKEN;
 client.once(Events.ClientReady, (client) => {
   console.log(`✅ Bot is online als ${client.user.tag}`);
 
-  client.user.setActivity("Kijkt naar Murat's Shop", {
+  client.user.setActivity("Murat's Shop", {
     type: ActivityType.Watching,
   });
 });
@@ -64,3 +64,4 @@ We zijn blij dat je er bent!
 
 
 client.login(TOKEN);
+
