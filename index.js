@@ -16,6 +16,14 @@ const client = new Client({
 });
 
 const TOKEN = process.env.TOKEN;
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Bot is online 🚀');
+}).listen(PORT, () => {
+  console.log(`🌐 HTTP server draait op poort ${PORT}`);
+});
 
 client.once(Events.ClientReady, (client) => {
   console.log(`✅ Bot is online als ${client.user.tag}`);
@@ -64,4 +72,5 @@ We zijn blij dat je er bent!
 
 
 client.login(TOKEN);
+
 
