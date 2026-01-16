@@ -66,9 +66,9 @@ Welkom **${member.user.username}** in **${member.guild.name}**! 🎉
 
 We zijn blij dat je er bent!
 
-📌 **Lees even de regels door:** <#1434578266672468128>
-👀 **Neem een kijkje bij mededelingen:** <#1434578266672468131>
-💬 **Zeg hallo tegen de mensen in:** <#1434578267561656469>
+📌 **Lees even de [Regels](https://discord.com/channels/1364329816605593781/1379700039676329994)
+👀 **Neem een kijkje bij [Mededeling](https://discord.com/channels/1364329816605593781/1451610921314025697)
+💬 **Praat met mensen in [Chat](https://discord.com/channels/1364329816605593781/1367568892171522068)
 `)
     .setColor(0xFF0000)
     .setThumbnail(member.user.displayAvatarURL())
@@ -87,5 +87,6 @@ We zijn blij dat je er bent!
    LOGIN
 ====================== */
 client.login(TOKEN);
+
 
 
