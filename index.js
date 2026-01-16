@@ -38,7 +38,7 @@ http.createServer((req, res) => {
 client.once(Events.ClientReady, (client) => {
   console.log(`✅ Bot is online als ${client.user.tag}`);
 
-  client.user.setActivity("Kijt naar Murat's Shop", {
+  client.user.setActivity("Murat's Shop", {
     type: ActivityType.Watching,
   });
 });
@@ -87,3 +87,4 @@ We zijn blij dat je er bent!
    LOGIN
 ====================== */
 client.login(TOKEN);
+
