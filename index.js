@@ -47,7 +47,7 @@ client.once(Events.ClientReady, (client) => {
    WELCOME EVENT
 ====================== */
 client.on(Events.GuildMemberAdd, async (member) => {
-  const channelId = '1434578266672468124';
+  const channelId = '1379163957201338468';
 
   let channel;
   try {
@@ -87,4 +87,5 @@ We zijn blij dat je er bent!
    LOGIN
 ====================== */
 client.login(TOKEN);
+
 
